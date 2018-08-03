@@ -13,7 +13,7 @@ public class CustomParamConverter_Resource {
 @Produces(MediaType.TEXT_PLAIN)
 public String getDateInstance(@PathParam("datestring") CustomParamConverter datestring) {
 	
-	return "Got "+datestring.toString();
+	return "Got it !! "+datestring.toString();
 }
 
 }
