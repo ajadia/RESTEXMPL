@@ -8,15 +8,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("readerwritter")
-public class DateMessageBody_reader_writter {
-
+@Path("customMediaConverter")
+public class CustomMediaConverter {
+	
+	
 	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public Date readWriteMessageBody() {
-
+	//@Produces("text/shortdate") OR If u have diff version of media type
+	@Produces(value = { MediaType.TEXT_PLAIN, "text/shortdate"})
+	public Date customShortDate() {
 		return Calendar.getInstance().getTime();
-
 	}
+
 
 }
